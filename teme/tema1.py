@@ -72,13 +72,13 @@ def solve_quadratic(a, b, c):
         return f"{real_part} ± {imaginary_part}i"
 
 # Example usage:
-print("#1 Suma numerelor de la 1 la 100:", sum_1_to_100())
+print("#1 Suma numerelor de la 1 la 100:", "\033[92m" + str(sum_1_to_100()) + "\033[0m")
 print("#2 Afisarea primelor 20 de numere impare:", first_20_odd_numbers())
 print("#3 Cel mai mare divizor comun pentru 2 numere citite de la tastatura:", greatest_common_divisor(48, 18))
 print("#4 Afisati daca un numar citit de la tastatura este prim", is_prime(29))
 print("#5 Afisati suma si media unei liste de numere citite de la tastatura:", sum_and_average([10, 20, 30, 40]))
 print("#6 Se citesc 3 numere de la tastatura, verificati daca acestea pot reprezenta unghiurile unui triunghi", is_triangle(60, 60, 60))
 print("#7 Sortati o lista de elemente citite de la tastatura, folosind orice metoda de sortare doriti (nu functia sort):", bubble_sort([34, 23, 67, 100, 88, 2]))
-print("#8 Scrieti un program care afiseaza ziua saptamanii pentru un numar citit de la tastatura (de la 1 la 7) unde  1=luni , 7 = duminica:", day_of_week(3))
+print("#8 Scrieti un program care afiseaza ziua saptamanii pentru un numar citit de la tastatura (de la 1 la 7) unde  1=luni , 7 = duminica:", day_of_week(7))
 print("#9 Afisati maximul dintr-un vector de elemente citit de la tastatura:", max_in_list([3, 67, 23, 45, 89]))
-print("#10 Rezolvati ecuatia de gradul al doilea 1x^2 -5x + 6 = 0:", solve_quadratic(1, -5, 6))
+print("#10 Rezolvati ecuatia de gradul al doilea 1x^2 -5x + 6 = 0:", solve_quadratic(1, -5, 6))

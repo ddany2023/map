@@ -1,0 +1,16 @@
+adaugare sqlite3
+
+pip3 install keyboard
+pip3 install pyautogui (are nevoie de continutul pe care l cautam)
+pip3 install opencv-python
+
+
+
+!TA : cum dam click pe video pe youtube si sa dam like
+
+
+
+def apasare_like():
+    # Așteaptă câteva secunde pentru a se încărca videoclipul
+    time.sleep(5)
+    pyautogui.click(1500, 780)  # Ajustați coordonatele după nevoie

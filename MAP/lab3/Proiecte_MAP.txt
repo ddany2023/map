@@ -1,0 +1,5 @@
+Proiect MAP : 
+ex1) generator de QR
+
+
+ex de proiecte : roadmap.sh

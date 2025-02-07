@@ -6,7 +6,7 @@ def sum_1_to_100():
 
 # 2. Afisarea primelor 20 de numere impare
 def first_20_odd_numbers():
-    return [num for num in range(1, 40, 2)]
+    return [num for num in range(2, 40, 2)]
 
 # 3. Cel mai mare divizor comun pentru 2 numere citite de la tastatura
 def greatest_common_divisor(num1, num2):

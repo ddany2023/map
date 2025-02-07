@@ -1,0 +1,45 @@
+def tipuri_de_date():
+    x = 5
+    y = 10
+    z = "MAP"
+    print(type(x)," ",type(y)," ", type(z))
+ 
+def verificare_numere():
+    x = 5
+    y = 10
+    if (x > y):
+        print("X > Y")
+    else:
+        print("Y > X")
+ 
+def tuplu():
+    black_friday = ["Emag","Altex","Flanco"]
+    e,a,f = black_friday
+    print(e," ",a," ",f)
+ 
+def interpolare():
+    x = 2
+    text = "Numele meu este Gabriel si sunt in anul {}"
+    print(text.format(x))
+ 
+def instructiunea_while():
+    i = 1
+    while i <= 5:
+        print("Bucla while", i)
+        i += 1
+ 
+def lista_de_elemente():
+    elemente = []
+    n = int(input("Introdu numarul de elemente"))
+    for i in range (0,n):
+        print( "Introdu elementul pentru pozitia ", i + 1 )
+        item = int(input())
+        elemente.append(item)
+    print( "Lista mea de elemente este: ", elemente )
+ 
+#lista_de_elemente()  
+#instructiunea_while()    
+#interpolare()
+#tuplu()
+#verificare_numere()
+#tipuri_de_date()

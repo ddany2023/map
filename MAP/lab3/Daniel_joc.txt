@@ -1,0 +1,21 @@
+CHOICES = [
+    {"type": "ROCK", "wins": "SCISSORS", "looses": "PAPER"},
+    {"type": "PAPER", "wins": "ROCK", "looses": "SCISSORS"},
+    {"type": "SCISSORS", "wins": "PAPER", "looses": "ROCK"},
+]
+ 
+def play_game(player_choice):
+    computer_choice = random.choice(CHOICES)
+ 
+    if computer_choice["looses"] == player_choice:
+        result = "YOU WON!"
+    elif computer_choice["wins"] == player_choice:
+        result = "YOU LOST!"
+    else:
+        result = "EQUALITY!"
+    messagebox.showinfo(
+            "RESULT",
+            f"{result}\n"
+            f"you chose: {player_choice}\n"
+            f"computer chose: {computer_choice['type']}",
+        )

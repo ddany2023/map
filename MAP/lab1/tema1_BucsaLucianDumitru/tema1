@@ -1,0 +1,93 @@
+import math
+
+suma = sum(range(1, 101))
+print("Suma numerelor de la 1 la 100 este:", suma)
+
+
+
+impare = [i for i in range(1, 40) if i % 2 != 0]
+print("Primele 20 de nr impare:", impare)
+
+
+
+def cmmdc(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a
+a = int(input("Primul nr este: "))
+b = int(input("Al doilea nr este: "))
+print("Cel mai mare divizor comun este:", cmmdc(a, b))
+
+
+
+def numar_prim(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(math.sqrt(n)) + 1):
+        if n % i == 0:
+            return False
+    return True
+numar = int(input("Introdu un nr de la tastatura: "))
+if numar_prim(numar):
+    print(numar, "este un nr prim.")
+else:
+    print(numar, "nu este un nr prim.")
+
+
+
+lista = list(map(int, input("Introdu numere de la tastatura separate prin spatiu: ").split()))
+suma_lista = sum(lista)
+media_lista = suma_lista / len(lista) if len(lista) > 0 else 0
+print("Suma numerelor este:", suma_lista)
+print("Media numerelor este:", media_lista)
+
+
+
+unghiuri = list(map(int, input("Verificam daca numerele pot reprezenta unghiurile unui triunghi. Introdu trei nr separate prin spatiu: ").split()))
+if len(unghiuri) == 3 and sum(unghiuri) == 180 and all(u > 0 for u in unghiuri):
+    print("Unghiurile pot forma un triunghi!")
+else:
+    print("Unghiurile nu pot forma un triunghi!")
+
+
+
+lista_sortare = list(map(int, input("Introdu elementele listei separate prin spatiu: ").split()))
+n = len(lista_sortare)
+for i in range(n):
+    for j in range(0, n-i-1):
+        if lista_sortare[j] > lista_sortare[j+1]:
+            lista_sortare[j], lista_sortare[j+1] = lista_sortare[j+1], lista_sortare[j]
+print("Lista sortata este :", lista_sortare)
+
+
+
+zilele_saptamanii = ["Luni", "Marti", "Miercuri", "Joi", "Vineri", "Sambata", "Duminica"]
+numar_zi = int(input("Introdu un nr cuprins intre 1 si 7: "))
+if 1 <= numar_zi <= 7:
+    print("Ziua saptamanii este:", zilele_saptamanii[numar_zi - 1])
+else:
+    print("Nr invalid. Introdu un nr intre 1 si 7.")
+
+
+
+vector_elemente = list(map(int, input("Introdu elementele vectorului separate prin spatiu: ").split()))
+maxim = max(vector_elemente)
+print("Maximul vectorului de elemente este:", maxim)
+
+
+
+print("Ecuatie de gradul II :  ax^2 + bx + c = 0")
+a = float(input("Introdu  a: "))
+b = float(input("Introdu  b: "))
+c = float(input("Introdu  c: "))
+delta = b**2 - 4*a*c
+
+if delta > 0:
+    x1 = (-b + math.sqrt(delta)) / (2 * a)
+    x2 = (-b - math.sqrt(delta)) / (2 * a)
+    print("Ecuatia are 2 solutii reale:", x1, "si", x2)
+elif delta == 0:
+    x = -b / (2 * a)
+    print("Ecuatia are 1 solutie reala:", x)
+else:
+    print("Ecuatia nu are solutii reale.")
